@@ -11,11 +11,11 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static files จากโฟลเดอร์ public
-app.use(express.static(path.join(__dirname, '')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 // Route สำหรับหน้า index (root) และ /index
 app.get(['/', '/index'], (req, res) => {
-  res.sendFile(path.join(__dirname, '', 'index.html'));
+  res.sendFile(path.join(__dirname, '/public', 'index.html'));
 });
 
 // MongoDB URI ของคุณ
